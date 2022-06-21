@@ -7,7 +7,7 @@ searchButton.addEventListener('click', function () {
 	resultKeyword = inputKeyword.value;
 	movieTitle.innerHTML = resultKeyword;
 
-	fetch('http://www.omdbapi.com/?apikey=274aa182&s=' + inputKeyword.value)
+	fetch('https://www.omdbapi.com/?apikey=274aa182&s=' + inputKeyword.value)
 		.then(response => response.json())
 		.then(response => {
 
@@ -22,7 +22,7 @@ searchButton.addEventListener('click', function () {
 			seeDetail.forEach(btn => {
 				btn.addEventListener('click', function () {
 					const imdbID = this.dataset.imdbid;
-					fetch('http://www.omdbapi.com/?apikey=274aa182&i=' + imdbID)
+					fetch('https://www.omdbapi.com/?apikey=274aa182&i=' + imdbID)
 						.then(response => response.json())
 						.then(m => {
 							const movieDetail = showDetailMovie(m);
@@ -77,7 +77,7 @@ function showDetailMovie(m) {
 			`
 }
 
-fetch('http://www.omdbapi.com/?apikey=274aa182&s=My Hero Academia')
+fetch('https://www.omdbapi.com/?apikey=274aa182&s=My Hero Academia')
 	.then(response => response.json())
 	.then(response => {
 
@@ -92,7 +92,7 @@ fetch('http://www.omdbapi.com/?apikey=274aa182&s=My Hero Academia')
 		seeDetailFavorit.forEach(btn => {
 			btn.addEventListener('click', function () {
 				const imdbID = this.dataset.imdbid;
-				fetch('http://www.omdbapi.com/?apikey=274aa182&i=' + imdbID)
+				fetch('https://www.omdbapi.com/?apikey=274aa182&i=' + imdbID)
 					.then(response => response.json())
 					.then(m => {
 						const movieDetail = showDetailMovie(m);
@@ -104,7 +104,7 @@ fetch('http://www.omdbapi.com/?apikey=274aa182&s=My Hero Academia')
 
 	});
 
-fetch('http://www.omdbapi.com/?apikey=274aa182&s=Haikyuu')
+fetch('https://www.omdbapi.com/?apikey=274aa182&s=Haikyuu')
 	.then(response => response.json())
 	.then(response => {
 
@@ -119,7 +119,7 @@ fetch('http://www.omdbapi.com/?apikey=274aa182&s=Haikyuu')
 		seeDetailFavoritSport.forEach(btn => {
 			btn.addEventListener('click', function () {
 				const imdbID = this.dataset.imdbid;
-				fetch('http://www.omdbapi.com/?apikey=274aa182&i=' + imdbID)
+				fetch('https://www.omdbapi.com/?apikey=274aa182&i=' + imdbID)
 					.then(response => response.json())
 					.then(m => {
 						const movieDetail = showDetailMovie(m);
